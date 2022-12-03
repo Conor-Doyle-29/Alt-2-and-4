@@ -1,7 +1,7 @@
 import serial
 ser = serial.Serial()
 ser.baudrate = 115200
-ser.port= 'COM16'
+ser.port= 'COM3'
 ser.open()
 
 while True:
@@ -12,6 +12,6 @@ while True:
     data= data.replace("\\r\\n", "")
     if len(data) >0:
         print(data)
-        file= open ("temps.csv",'a')
+        file= open ("tmp.csv",'a')
         file.write(data+",")
         file.close 
