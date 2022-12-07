@@ -1,7 +1,7 @@
 import serial
 ser = serial.Serial()
 ser.baudrate = 115200
-ser.port= 'COM3'
+ser.port= 'COM13'
 ser.open()
 
 while True:
