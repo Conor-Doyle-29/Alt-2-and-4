@@ -1,6 +1,6 @@
 import statistics as stat
 import matplotlib.pyplot as plt 
-
+import collections 
 file=open("tmp.csv","r")
 dataIn=file.read()
 file.close
@@ -44,5 +44,14 @@ print(mode2)
 mode3=stat.mode(list3)
 print(mode3)
 
-plt.plot(list1,list2)
+frequency1 = collections.Counter(list1)
+print(frequency1)
+frequency2 = collections.Counter(list2)
+print(frequency2)
+frequency3 = collections.Counter(list3)
+print(frequency3)
+
+plt.plot(list1)
+plt.plot(list2)
+plt.plot(list3)
 plt.show()
